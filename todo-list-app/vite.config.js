@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api':'https://literate-tribble-r759v55r6j6cxpg6-3000.app.github.dev'
+      '/api':'https://pmwm301k-3000.auc1.devtunnels.ms',
     },
-  },
+  }
 });

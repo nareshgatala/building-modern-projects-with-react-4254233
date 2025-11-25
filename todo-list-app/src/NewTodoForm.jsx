@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { createTodo } from "./todoSlice";
+import { createTodo } from "./thunks";
 import { useState } from "react";
 
 export default function NewTodoForm() { 
@@ -12,7 +12,9 @@ export default function NewTodoForm() {
       value={inputText}
       onChange={e => setInputText(e.target.value)}    
       />
-      <button onClick={() => dispatch(createTodo(inputText))}>Create Todo</button>
+      <button onClick={() => { dispatch(createTodo(inputText)); 
+        setInputText('');
+        }}>Create Todo</button>
     </div>
   )
 }
